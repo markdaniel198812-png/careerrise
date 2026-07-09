@@ -106,3 +106,22 @@ body{
 }
 
 }
+form input{
+    width:100%;
+    padding:15px;
+    border:1px solid #d9d9d9;
+    border-radius:10px;
+    font-size:16px;
+    margin-top:10px;
+}
+
+form input:focus{
+    outline:none;
+    border-color:#2563eb;
+}
+
+form .apply-btn{
+    width:100%;
+    border:none;
+    cursor:pointer;
+}
