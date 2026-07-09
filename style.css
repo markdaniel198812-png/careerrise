@@ -1,154 +1,168 @@
+/* ===== RESET ===== */
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Inter',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
+    font-family:'Inter',sans-serif;
     background:#f5f7fb;
     color:#0f172a;
+    line-height:1.6;
 }
 
-.header{
-    width:100%;
-    padding:25px 8%;
+/* ===== CONTAINER ===== */
+.container{
+    width:min(1200px,92%);
+    margin:auto;
+}
+
+/* ===== NAVBAR ===== */
+.navbar{
     background:#ffffff;
+    border-bottom:1px solid #e5e7eb;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.navbar .container{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    box-shadow:0 3px 15px rgba(0,0,0,.06);
+    padding:18px 0;
 }
 
 .logo{
     font-size:30px;
-    font-weight:700;
+    font-weight:800;
     color:#0A2540;
 }
 
-.hero{
-    width:100%;
-    min-height:80vh;
+nav{
     display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:40px 20px;
+    gap:28px;
 }
 
-.hero-content{
-    max-width:700px;
+nav a{
+    text-decoration:none;
+    color:#334155;
+    font-weight:600;
+}
+
+nav a:hover{
+    color:#2563eb;
+}
+
+/* ===== HERO ===== */
+.hero{
+    display:grid;
+    grid-template-columns:1.2fr .8fr;
+    gap:60px;
+    align-items:center;
+    min-height:85vh;
+    width:min(1200px,92%);
+    margin:auto;
+}
+
+.badge{
+    display:inline-block;
+    padding:8px 16px;
+    background:#dbeafe;
+    color:#2563eb;
+    border-radius:999px;
+    font-size:14px;
+    font-weight:700;
 }
 
 .hero h1{
-    font-size:52px;
-    line-height:1.2;
+    margin:20px 0;
+    font-size:56px;
+    line-height:1.1;
     color:#0A2540;
 }
 
 .hero p{
-    margin-top:20px;
     font-size:20px;
+    color:#64748b;
+    max-width:650px;
+}
+
+.hero-buttons{
+    margin-top:35px;
+    display:flex;
+    gap:16px;
+    flex-wrap:wrap;
+}
+
+.primary-btn,
+.secondary-btn{
+    text-decoration:none;
+    padding:16px 28px;
+    border-radius:12px;
+    font-weight:700;
+    transition:.25s;
+}
+
+.primary-btn{
+    background:#2563eb;
+    color:#fff;
+}
+
+.primary-btn:hover{
+    transform:translateY(-2px);
+}
+
+.secondary-btn{
+    border:2px solid #2563eb;
+    color:#2563eb;
+}
+
+.hero-card{
+    background:#fff;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+
+.hero-card h3{
+    margin-bottom:20px;
+    color:#0A2540;
+}
+
+.hero-card ul{
+    padding-left:20px;
+}
+
+.hero-card li{
+    margin-bottom:12px;
     color:#475569;
 }
 
-.apply-btn{
-    display:inline-block;
-    margin-top:40px;
-    padding:18px 50px;
-    background:#2563eb;
-    color:#fff;
-    text-decoration:none;
-    border-radius:12px;
-    font-size:20px;
-    font-weight:600;
-    transition:.3s;
-}
-
-.apply-btn:hover{
-    background:#1d4ed8;
-    transform:translateY(-3px);
-}
-
-.upload-section{
-    max-width:900px;
-    margin:80px auto;
-    background:#fff;
-    border-radius:20px;
-    padding:50px;
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
-}
-
-.upload-section h2{
-    font-size:34px;
-    color:#0A2540;
-    margin-bottom:15px;
-}
-
-.upload-section p{
-    color:#64748b;
-    font-size:18px;
-}
-
-@media(max-width:768px){
-
-.hero h1{
-    font-size:36px;
-}
-
-.hero p{
-    font-size:18px;
-}
-
-.upload-section{
-    margin:40px 20px;
-    padding:30px;
-}
-
-}
-form input{
-    width:100%;
-    padding:15px;
-    border:1px solid #d9d9d9;
-    border-radius:10px;
-    font-size:16px;
-    margin-top:10px;
-}
-
-form input:focus{
-    outline:none;
-    border-color:#2563eb;
-}
-
-form .apply-btn{
-    width:100%;
-    border:none;
-    cursor:pointer;
-}
-.apply-btn{
-    box-shadow:0 15px 35px rgba(37,99,235,.30);
-}
-
-.apply-btn:hover{
-    box-shadow:0 20px 45px rgba(37,99,235,.40);
-}
+/* ===== MOBILE ===== */
+@media(max-width:900px){
 
 .hero{
-    background:linear-gradient(135deg,#ffffff 0%,#eef5ff 100%);
+    grid-template-columns:1fr;
+    text-align:center;
+    padding:60px 0;
 }
 
-.hero-content{
-    animation:fadeUp 1s ease;
+.hero h1{
+    font-size:40px;
 }
 
-@keyframes fadeUp{
-    from{
-        opacity:0;
-        transform:translateY(40px);
-    }
+.hero-buttons{
+    justify-content:center;
+}
 
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
+nav{
+    display:none;
+}
+
 }
