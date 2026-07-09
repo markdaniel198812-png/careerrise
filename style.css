@@ -151,3 +151,66 @@ h1 {
     }
 
 }
+.application {
+    width: 90%;
+    max-width: 800px;
+    margin: 80px auto;
+}
+
+.application-box {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.application-box h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: #111827;
+}
+
+.application-box p {
+    color: #6b7280;
+    margin-bottom: 30px;
+}
+
+.application-box form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.application-box input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.application-box label {
+    text-align: left;
+    font-weight: 600;
+    color: #374151;
+}
+
+.application-box input[type="file"] {
+    background: #f9fafb;
+}
+
+.application-box button {
+    padding: 15px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.application-box button:hover {
+    background: #1d4ed8;
+}
